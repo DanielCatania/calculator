@@ -5,10 +5,15 @@ interface Props {
     numericKeys: string[];
     addNumber: Function;
   };
+  keyboardOperation: {
+    operatiosnKeys: string[];
+    changeOperation: Function;
+  };
 }
 
 export default function Keyboard({
   keyboardNumeric: { numericKeys, addNumber },
+  keyboardOperation: { operatiosnKeys, changeOperation },
 }: Props) {
   return (
     <div>
@@ -22,6 +27,18 @@ export default function Keyboard({
           />
         ))}
       </ul>
+      <aside>
+        <ul>
+          {operatiosnKeys.map((operation) => (
+            <input
+              type="button"
+              key={operation}
+              value={operation}
+              onClick={() => changeOperation(operation)}
+            />
+          ))}
+        </ul>
+      </aside>
     </div>
   );
 }
