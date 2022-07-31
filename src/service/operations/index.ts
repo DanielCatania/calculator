@@ -114,6 +114,8 @@ const operationsService = {
   resetNumber() {
     this.firstNumber = 0;
     this.secondNumber = 0;
+
+    this.notify();
   },
 };
 

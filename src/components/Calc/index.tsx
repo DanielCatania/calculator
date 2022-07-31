@@ -5,6 +5,7 @@ import Screen from "./Screen";
 
 import numbersService from "../../service/numbers";
 import operationsService from "../../service/operations";
+import functionsService from "../../service/functions";
 
 export default function Calc() {
   const [number, setNumber] = React.useState(numbersService.number);
@@ -34,6 +35,11 @@ export default function Calc() {
           operatiosnKeys: operationsService.operationsKeys,
           changeOperation:
             operationsService.changeOperation.bind(operationsService),
+        }}
+        keyboardFunctions={{
+          executeFunction:
+            functionsService.executeFunction.bind(functionsService),
+          functionsKeys: functionsService.functionsKeys,
         }}
       />
     </div>
