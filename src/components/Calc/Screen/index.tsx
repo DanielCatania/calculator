@@ -1,23 +1,23 @@
 import React from "react";
+import ScreenWithAccount from "./ScreenWithAccount";
+import SimpleScreen from "./SimpleScreen";
+import BoxScreen from "./BoxScreen";
 
-interface Props {
+export interface Props {
   number: string;
   firstNumber: number;
   operation: string;
 }
 
-export default function Screen({ number, firstNumber, operation }: Props) {
+export default function Screen(props: Props) {
+  const { firstNumber, number } = props;
   return (
-    <h1>
+    <BoxScreen>
       {firstNumber !== 0 ? (
-        <>
-          <span>{firstNumber}</span>
-          <span>{operation}</span>
-          <span>{number}</span>
-        </>
+        <ScreenWithAccount {...props} />
       ) : (
-        <span>{number}</span>
+        <SimpleScreen number={number} />
       )}
-    </h1>
+    </BoxScreen>
   );
 }
