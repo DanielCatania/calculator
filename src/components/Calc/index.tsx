@@ -2,6 +2,7 @@ import React from "react";
 
 import Keyboard from "./Keyboard";
 import Screen from "./Screen";
+import BoxCalc from "./BoxCalc";
 
 import numbersService from "../../service/numbers";
 import operationsService from "../../service/operations";
@@ -24,7 +25,7 @@ export default function Calc() {
   }, []);
 
   return (
-    <div>
+    <BoxCalc>
       <Screen number={number} firstNumber={firstNumber} operation={operation} />
       <Keyboard
         keyboardNumeric={{
@@ -42,6 +43,6 @@ export default function Calc() {
           functionsKeys: functionsService.functionsKeys,
         }}
       />
-    </div>
+    </BoxCalc>
   );
 }
