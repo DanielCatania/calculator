@@ -1,4 +1,5 @@
 import React from "react";
+import Key, { SpecialKey } from "../Key";
 
 interface Props {
   keyboardNumeric: {
@@ -25,7 +26,7 @@ export default function Keyboard({
       <div>
         <ul>
           {functionsKeys.map((func) => (
-            <input
+            <SpecialKey
               type="button"
               key={func}
               value={func}
@@ -35,7 +36,7 @@ export default function Keyboard({
         </ul>
         <ul>
           {numericKeys.map((number) => (
-            <input
+            <Key
               type="button"
               key={number}
               value={number}
@@ -48,7 +49,7 @@ export default function Keyboard({
       <aside>
         <ul>
           {operatiosnKeys.map((operation) => (
-            <input
+            <SpecialKey
               type="button"
               key={operation}
               value={operation}
