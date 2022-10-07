@@ -7,13 +7,15 @@ const Key = styled.input`
   border: none;
 
   text-align: center;
+  font-size: 22px;
 `;
 
 export const SpecialKey = styled(Key)`
   color: #000;
   background-color: #ffb800;
-
   border-radius: 15px;
+
+  font-size: 1.5em;
 `;
 
 export default Key;
