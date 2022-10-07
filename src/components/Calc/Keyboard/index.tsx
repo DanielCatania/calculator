@@ -1,63 +1,38 @@
 import React from "react";
-import Key, { SpecialKey } from "../Key";
+
+import Box from "./Box";
+
+import NumericKeyboard, {
+  Props as NumericKeyboardProps,
+} from "./NumericKeyboard/";
+import FunctionsKeyboard, {
+  Props as FunctionsKeyboardProps,
+} from "./FunctionsKeyboard/";
+import OperationsKeyboard, {
+  Props as OperationsKeyboardProps,
+} from "./OperationsKeyboard/";
 
 interface Props {
-  keyboardNumeric: {
-    numericKeys: string[];
-    addNumber: Function;
-  };
-  keyboardOperation: {
-    operatiosnKeys: string[];
-    changeOperation: Function;
-  };
-  keyboardFunctions: {
-    functionsKeys: string[];
-    executeFunction: Function;
-  };
+  keyboardNumeric: NumericKeyboardProps;
+  keyboardOperation: OperationsKeyboardProps;
+  keyboardFunctions: FunctionsKeyboardProps;
 }
 
 export default function Keyboard({
-  keyboardNumeric: { numericKeys, addNumber },
-  keyboardOperation: { operatiosnKeys, changeOperation },
-  keyboardFunctions: { functionsKeys, executeFunction },
+  keyboardNumeric,
+  keyboardOperation,
+  keyboardFunctions,
 }: Props) {
   return (
-    <div>
+    <Box>
       <div>
-        <ul>
-          {functionsKeys.map((func) => (
-            <SpecialKey
-              type="button"
-              key={func}
-              value={func}
-              onClick={() => executeFunction(func)}
-            />
-          ))}
-        </ul>
-        <ul>
-          {numericKeys.map((number) => (
-            <Key
-              type="button"
-              key={number}
-              value={number}
-              onClick={() => addNumber(number)}
-            />
-          ))}
-        </ul>
+        <FunctionsKeyboard {...keyboardFunctions} />
+        <NumericKeyboard {...keyboardNumeric} />
       </div>
 
       <aside>
-        <ul>
-          {operatiosnKeys.map((operation) => (
-            <SpecialKey
-              type="button"
-              key={operation}
-              value={operation}
-              onClick={() => changeOperation(operation)}
-            />
-          ))}
-        </ul>
+        <OperationsKeyboard {...keyboardOperation} />
       </aside>
-    </div>
+    </Box>
   );
 }

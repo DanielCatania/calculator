@@ -33,7 +33,7 @@ export default function Calc() {
           addNumber: numbersService.addNumber.bind(numbersService),
         }}
         keyboardOperation={{
-          operatiosnKeys: operationsService.operationsKeys,
+          operationsKeys: operationsService.operationsKeys,
           changeOperation:
             operationsService.changeOperation.bind(operationsService),
         }}
