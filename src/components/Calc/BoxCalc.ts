@@ -3,8 +3,8 @@ import styled from "styled-components";
 const BoxCalc = styled.div`
   width: 90%;
   height: 80%;
-  max-width: 400px;
-  max-height: 600px;
+  max-width: 350px;
+  max-height: 500px;
 
   margin: auto;
   position: absolute;
