@@ -8,6 +8,9 @@ const Key = styled.input`
 
   text-align: center;
   font-size: 22px;
+
+  max-width: 60px;
+  max-height: 60px;
 `;
 
 export const SpecialKey = styled(Key)`
@@ -16,6 +19,9 @@ export const SpecialKey = styled(Key)`
   border-radius: 15px;
 
   font-size: 1.5em;
+
+  max-width: 70px;
+  max-height: 70px;
 `;
 
 export default Key;
