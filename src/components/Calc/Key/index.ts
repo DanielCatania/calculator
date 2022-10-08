@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Key = styled.input`
-  background: #1a1a1a;
-  color: #fff;
+  background: ${({ theme }) => theme.colors.secundary};
+  color: ${({ theme }) => theme.colors.text};
   border-radius: 10px;
   border: none;
 

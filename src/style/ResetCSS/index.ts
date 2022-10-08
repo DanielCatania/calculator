@@ -4,6 +4,11 @@ const ResetCSS = createGlobalStyle`
 * {
   box-sizing: border-box;
 }
+
+button {
+  border: none;
+  background: none;
+}
  
 #__next, html, body {
   width: 100%;

@@ -14,7 +14,7 @@ const BoxCalc = styled.div`
   left: 0;
 
   padding: 1em;
-  background-color: #a7a7a7;
+  background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 15px;
 `;
 
