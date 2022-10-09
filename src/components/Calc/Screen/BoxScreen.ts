@@ -10,6 +10,8 @@ const BoxScreen = styled.div`
   justify-content: flex-end;
 
   background-color: #fff;
+
+  overflow-x: hidden;
 `;
 
 export default BoxScreen;
