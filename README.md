@@ -1,5 +1,5 @@
 # Calculator
-![license MIT](https://img.shields.io/badge/license-MIT-blue) ![version v1.0](https://img.shields.io/badge/version-v1.0-orange)
+![license MIT](https://img.shields.io/badge/license-MIT-blue) ![version v1.0](https://img.shields.io/badge/version-v1.1-orange)
 
 Sim, uma calculadora, porque todo o programador tem uma calculadora.
 > Yes, a calculator, because every dev has a calculator.
